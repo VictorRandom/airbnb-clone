@@ -11,12 +11,14 @@ function App() {
     // console.log(card);
     return (
       <Card
+        key={card.id}
         img={card.coverImg}
         rating={card.stats.rating}
         reviewCount={card.stats.reviewCount}
         location={card.location}
         title={card.title}
         price={card.price}
+        openSpots={card.openSpots}
       />
     );
   });
@@ -25,7 +27,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {cardInfo}
+      <section className="cards-list">
+        {cardInfo}
+      </section>
     </div>
   );
 }
