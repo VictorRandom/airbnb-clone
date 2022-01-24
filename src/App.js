@@ -13,6 +13,7 @@ function App() {
       <Card
         key={card.id}
         card={card}
+        // {...card} - precisa tirar o .card de todos os componentes
         // img={card.coverImg}
         // rating={card.stats.rating}
         // reviewCount={card.stats.reviewCount}
